@@ -62,14 +62,14 @@ if ($query === TRUE) {
 	echo "<h3>requests table NOT created :( </h3>"; 
 }
 
-//////////////////////////////////////0 for accepted; 1 for rejected; 2 for quit
+//////////////////////////////////////0 for accepted; 1 for rejected; 2 for quit; 3 for deleted
 
 $tbl_notifications = "CREATE TABLE IF NOT EXISTS notifications ( 
                 id INT(11) NOT NULL AUTO_INCREMENT,
                 user INT(10) NOT NULL,
 	receiver INT(10) NOT NULL,
                 pool INT(10) NOT NULL,
-                type ENUM('0','1','2'),		
+                type ENUM('0','1','2','3'),		
                 date_time DATETIME NOT NULL,
                 PRIMARY KEY (id) 
                 )"; 
